@@ -12,7 +12,8 @@ RUN apt-get --allow-releaseinfo-change update \
 RUN install2.r --error \
     table1 \
     patchwork \
-    kableExtra
+    kableExtra \
+    papaja
 
 # Install R packages on GitHub
 RUN R -e "devtools::install_github('achetverikov/apastats', subdir='apastats')"
