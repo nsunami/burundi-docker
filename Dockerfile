@@ -8,12 +8,12 @@ RUN apt-get --allow-releaseinfo-change update \
     r-cran-tidyverse \
     r-cran-devtools 
 
+# Install R packages on GitHub
+RUN R -e "devtools::install_github('achetverikov/apastats', subdir='apastats')"
+
 # Install R packages
 RUN install2.r --error \
     table1 \
     patchwork \
     kableExtra \
     papaja
-
-# Install R packages on GitHub
-RUN R -e "devtools::install_github('achetverikov/apastats', subdir='apastats')"
